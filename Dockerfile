@@ -1,5 +1,4 @@
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html
-COPY logoimage.png /usr/share/nginx/html
-EXPOSE 80 443
-CMD ["nginx", "-g", "daemon off;"]
+FROM python:3.10.0-alpine
+COPY main.py
+RUN pip install requests
+CMD ["python", "main.py"]
