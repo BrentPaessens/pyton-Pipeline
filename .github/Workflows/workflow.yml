@@ -4,6 +4,7 @@ on:
     push: 
       branches:
         - main
+        
 jobs: 
     test: 
       name: Run flake8 Linter
@@ -11,11 +12,10 @@ jobs:
       steps:
         - name: checkout code
           uses: actions/checkout@v3
-          
         - name: set up python
           uses: actions/setup-python@v4
           with:
-             python-version: 3.10.0
+             python-version: 3.10
            
         - name: install dependencies
           run: |
