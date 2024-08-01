@@ -2,12 +2,10 @@ name: python-api-devops
 
 on:
     push: 
-      branches:
-        - main
+      branches: [ main ]
         
 jobs: 
-    test: 
-      name: Run flake8 Linter
+    test:
       runs-on: ubuntu-latest
       steps:
         - name: checkout code
